@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import appNav from "./AppSidebar";
+import appNav from "./AppSlice";
 
 const store = configureStore({
   reducer: {

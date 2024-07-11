@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const AppSidebar = createSlice({
+const AppSlice = createSlice({
   name: "appNav",
   initialState: { isMenuOpen: true },
 
@@ -8,9 +8,12 @@ const AppSidebar = createSlice({
     menuSidebar(state) {
       state.isMenuOpen = !state.isMenuOpen;
     },
+    hideSidebar(state) {
+      state.isMenuOpen = false;
+    },
   },
 });
 
-export const { menuSidebar } = AppSidebar.actions;
+export const { menuSidebar, hideSidebar } = AppSlice.actions;
 
-export default AppSidebar.reducer;
+export default AppSlice.reducer;

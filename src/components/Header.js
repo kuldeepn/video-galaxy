@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { menuSidebar } from "../utils/AppSidebar";
+import { menuSidebar } from "../utils/AppSlice";
 
 function Header() {
   const dispatch = useDispatch();
@@ -22,11 +22,13 @@ function Header() {
         >
           <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
         </svg>
-        <img
-          className="h-[70px] -mt-5 cursor-pointer"
-          src="https://www.logo.wine/a/logo/YouTube/YouTube-Logo.wine.svg"
-          alt="youtube-logo"
-        ></img>
+        <a href="/">
+          <img
+            className="h-[70px] -mt-5 cursor-pointer"
+            src="https://www.logo.wine/a/logo/YouTube/YouTube-Logo.wine.svg"
+            alt="youtube-logo"
+          ></img>
+        </a>
       </div>
       <div className="col-span-10 px-80 ">
         <input
